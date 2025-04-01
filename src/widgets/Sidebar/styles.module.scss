@@ -1,0 +1,33 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 250px;
+    padding: 30px 24px 100px 24px;
+
+    &__section {
+        &_top {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+    &__logo {
+
+    }
+
+    &__link {
+        display: inline-flex;
+        color: var(--gray-light);
+        width: 100%;
+        padding: 14px;
+        border-radius: 8px;
+        transition: color .3s, background-color .3s;
+
+        &:hover {
+            color: var(--gray-dark);
+            background-color: var(--green-primary);
+        }
+    }
+}

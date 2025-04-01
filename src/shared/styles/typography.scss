@@ -1,0 +1,41 @@
+.text {
+
+    &-s {
+        font-size: 12px;
+    }
+
+    &-m {
+        font-size: 14px;
+    }
+
+    &-l {
+        font-size: 18px;
+    }
+
+    &-xl {
+        font-size: 24px;
+    }
+}
+
+.heading {
+
+    &-s {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &-m {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &-l {
+        font-size: 24px;
+        font-weight: 500;
+
+        &_bold {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+}

@@ -1,10 +1,12 @@
+import { type ReactNode } from "react";
+import Sidebar from "./widgets/Sidebar/Sidebar";
 import "./App.scss";
 
-const App = (): React.ReactNode => {
+const App = (): ReactNode => {
     return (
-        <div className="example">
-            <span>hello world</span>
-        </div>
+        <>
+            <Sidebar />
+        </>
     );
 };
 
