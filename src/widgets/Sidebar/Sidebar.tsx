@@ -16,6 +16,15 @@ const linksMock: LinkI[] = [
 const Sidebar = (): ReactNode => {
     const [links] = useState(linksMock);
 
+    const renderedLinks = links.map((link: LinkI, index: number): ReactNode => (
+        <li key={index}>
+            <a
+                href={link.route}
+                className={'heading-s ' + styles.navigation__link}
+            >{link.label}</a>
+        </li>
+    ))
+
     return (
         <nav className={styles.navigation}>
             <section className={[styles.navigation__section, styles.navigation__section_top].join(' ')}>
@@ -24,14 +33,7 @@ const Sidebar = (): ReactNode => {
                     className={styles.navigation__logo}
                 >Here will be an Logo Icon</a>
                 <ul>
-                    {links.map((item: LinkI, index: number) => (
-                        <li key={index}>
-                            <a
-                                href={item.route}
-                                className={'heading-s ' + styles.navigation__link}
-                            >{item.label}</a>
-                        </li>
-                    ))}
+                    {renderedLinks}
                 </ul>
             </section>
             <section className={styles.navigation__section}>
