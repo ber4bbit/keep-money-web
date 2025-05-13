@@ -1,5 +1,5 @@
 import { type ReactNode, useState } from "react";
-import { type LinkI } from "./Sidebar.types";
+import { type LinkI } from "./sidebar.types.ts";
 import { NavLink } from "react-router";
 import styles from "./styles.module.scss";
 
@@ -15,7 +15,7 @@ const linksMock: LinkI[] = [
 ];
 
 const Sidebar = (): ReactNode => {
-    const [links] = useState(linksMock);
+    const [links] = useState<LinkI[]>(linksMock);
 
     return (
         <nav className={styles.navigation}>
@@ -26,7 +26,7 @@ const Sidebar = (): ReactNode => {
                 ].join(" ")}
             >
                 <a href="/" className={styles.navigation__logo}>
-                    Here will be an Logo Icon
+                    KeepMoney Web
                 </a>
                 <ul className={styles.navigation__list}>
                     {links.map((item: LinkI, index: number) => (

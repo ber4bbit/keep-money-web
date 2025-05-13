@@ -1,14 +1,17 @@
-import { type ReactNode } from "react";
-import styles from "./styles.module.scss";
+import { type ReactElement } from "react";
 import { useLocation } from "react-router";
+import { useTitleFormat } from "../../shared/hooks/useTitleFormat.ts";
+import styles from "./styles.module.scss";
 
-const Header = (): ReactNode => {
+const Header = (): ReactElement => {
     const location = useLocation();
+
+    const formattedToTitleLocation = useTitleFormat(location.pathname.replace("/", ""));
 
     return (
         <header className={styles.header}>
-            <span>
-                {location.pathname && location.pathname.replace("/", "")}
+            <span className='heading-l'>
+                {location.pathname && formattedToTitleLocation}
             </span>
         </header>
     );
