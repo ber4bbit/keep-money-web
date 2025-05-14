@@ -28,6 +28,8 @@
 
     &__link {
         display: inline-flex;
+        align-items: center;
+        gap: 12px;
         color: var(--gray-light);
         width: 100%;
         font-weight: 500;
