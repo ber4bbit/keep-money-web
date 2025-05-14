@@ -1,6 +1,6 @@
 /**
  * @param string Some string that needs to be formatted
- * in title format: first letter of word is capital
+ * in title format: the first letter of word is capital
  * @returns Formatted to title string
  * */
 export const useTitleFormat = (string: string): string => {

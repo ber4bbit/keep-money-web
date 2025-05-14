@@ -1,6 +1,6 @@
 import { type ReactElement } from "react";
 import { useLocation } from "react-router";
-import { useTitleFormat } from "../../shared/hooks/useTitleFormat.ts";
+import { useTitleFormat } from "../../features/hooks/useTitleFormat.ts";
 import styles from "./styles.module.scss";
 
 const Header = (): ReactElement => {
